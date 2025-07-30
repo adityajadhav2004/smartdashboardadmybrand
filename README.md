@@ -203,6 +203,43 @@ EXPOSE 3000
 CMD ["pnpm", "start"]
 ```
 
+## 🛠️ Deployment Issues & Fixes
+
+During the deployment process to Netlify, several technical issues were encountered and resolved:
+
+![Deployment Errors](./errors.png)
+
+### ⚠️ Issues Resolved:
+
+1. **TypeScript Import Error in theme-provider.tsx**
+   - **Issue**: `Cannot find module 'next-themes/dist/types'`
+   - **Fix**: Replaced problematic import with `React.ComponentProps<typeof NextThemesProvider>`
+
+2. **Node.js Version Compatibility**
+   - **Issue**: Node.js version 18.17.0 download failure on Netlify
+   - **Fix**: Updated to stable LTS version 18.19.0 in both `.nvmrc` and `netlify.toml`
+
+3. **Chart Component Type Errors**
+   - **Issue**: Missing `payload` property in chart tooltip/legend components
+   - **Fix**: Added proper TypeScript interfaces for Recharts components
+
+4. **Mock Data Type Mismatch**
+   - **Issue**: `ChartDataPoint` interface missing required `value` property in revenue data
+   - **Fix**: Added `value` property to match interface requirements
+
+### 📋 Configuration Files Added:
+- `netlify.toml` - Netlify build configuration
+- `.nvmrc` - Node.js version specification
+- Updated `package.json` with engines field
+
+### 🔧 Technical Debt Addressed:
+- TypeScript strict type checking compliance
+- Component prop type safety
+- Build system optimization
+- Dependency version alignment
+
+**Note**: These deployment challenges required systematic debugging and precise TypeScript knowledge. Each issue was methodically identified through build logs and resolved with targeted fixes to ensure production deployment success.
+
 ## 🤝 Contributing
 
 1. Fork the repository
