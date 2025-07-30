@@ -58,8 +58,8 @@ A modern, real-time analytics dashboard built for digital marketing agencies to 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/admybrand-insights.git
-   cd admybrand-insights
+   git clone https://github.com/adityajadhav2004/smartdashboardadmybrand.git
+   cd smartdashboardadmybrand
    ```
 
 2. **Install dependencies**
