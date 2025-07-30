@@ -50,11 +50,15 @@ export const generateMockMetrics = (): MetricCard[] => {
 
 export const generateRevenueData = (): ChartDataPoint[] => {
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return months.map((month, index) => ({
-    name: month,
-    revenue: 150000 + (index * 25000) + (Math.random() * 50000),
-    date: `2024-${String(index + 1).padStart(2, '0')}-01`
-  }));
+  return months.map((month, index) => {
+    const revenue = 150000 + (index * 25000) + (Math.random() * 50000);
+    return {
+      name: month,
+      value: revenue,
+      revenue: revenue,
+      date: `2024-${String(index + 1).padStart(2, '0')}-01`
+    };
+  });
 };
 
 export const generateCampaignPerformanceData = (): ChartDataPoint[] => {
