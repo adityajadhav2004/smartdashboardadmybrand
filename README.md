@@ -2,7 +2,7 @@
 
 A modern, real-time analytics dashboard built for digital marketing agencies to track campaign performance, user engagement, and revenue metrics. This comprehensive dashboard provides interactive data visualizations, filtering capabilities, and export functionality.
 
-![ADmyBRAND Insights Dashboard]()
+
 
 ## ✨ Features
 
